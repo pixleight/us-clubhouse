@@ -17,7 +17,7 @@ right up top and clean.
 *********************/
 
 // we're firing all out initial functions at the start
-add_action('after_setup_theme','bones_ahoy', 15);
+add_action('after_setup_theme','bones_ahoy', 16);
 
 function bones_ahoy() {
 
@@ -35,10 +35,10 @@ function bones_ahoy() {
     // enqueue base scripts and styles
     add_action('wp_enqueue_scripts', 'bones_scripts_and_styles', 999);
     // ie conditional wrapper
-    add_filter( 'style_loader_tag', 'bones_ie_conditional', 10, 2 );
 
     // launching this stuff after theme setup
-    add_action('after_setup_theme','bones_theme_support');
+    bones_theme_support();
+
     // adding sidebars to Wordpress (these are created in functions.php)
     add_action( 'widgets_init', 'bones_register_sidebars' );
     // adding the bones search form (created in functions.php)
@@ -122,6 +122,7 @@ SCRIPTS & ENQUEUEING
 
 // loading modernizr and jquery, and reply script
 function bones_scripts_and_styles() {
+  global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
   if (!is_admin()) {
 
     // modernizr (without media query polyfill)
@@ -145,6 +146,9 @@ function bones_scripts_and_styles() {
     wp_enqueue_script( 'bones-modernizr' );
     wp_enqueue_style( 'bones-stylesheet' );
     wp_enqueue_style('bones-ie-only');
+
+    $wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+
     /*
     I recommend using a plugin to call jQuery
     using the google cdn. That way it stays cached
@@ -154,14 +158,6 @@ function bones_scripts_and_styles() {
     wp_enqueue_script( 'bones-js' );
 
   }
-}
-
-// adding the conditional wrapper around ie stylesheet
-// source: http://code.garyjones.co.uk/ie-conditional-style-sheets-wordpress/
-function bones_ie_conditional( $tag, $handle ) {
-	if ( 'bones-ie-only' == $handle )
-		$tag = '<!--[if lt IE 9]>' . "\n" . $tag . '<![endif]-->' . "\n";
-	return $tag;
 }
 
 /*********************
@@ -265,7 +261,7 @@ function bones_footer_links() {
 function bones_main_nav_fallback() {
 	wp_page_menu( array(
 		'show_home' => true,
-    	'menu_class' => 'nav footer-nav clearfix',      // adding custom nav class
+    	'menu_class' => 'nav top-nav clearfix',      // adding custom nav class
 		'include'     => '',
 		'exclude'     => '',
 		'echo'        => true,
@@ -381,7 +377,7 @@ function bones_filter_ptags_on_images($content){
 function bones_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-	return '...  <a href="'. get_permalink($post->ID) . '" title="Read '.get_the_title($post->ID).'">Read more &raquo;</a>';
+return '...  <a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __('Read', 'bonestheme') . get_the_title($post->ID).'">'. __('Read more &raquo;', 'bonestheme') .'</a>';
 }
 
 /*

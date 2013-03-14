@@ -8,10 +8,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title><?php wp_title(''); ?></title>
-
 		<!-- Google Chrome Frame for IE -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title><?php wp_title(''); ?></title>
 
 		<!-- mobile meta (hooray!) -->
 		<meta name="HandheldFriendly" content="True">
@@ -28,7 +28,7 @@
 		<meta name="msapplication-TileColor" content="#f01d4f">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
-  	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
