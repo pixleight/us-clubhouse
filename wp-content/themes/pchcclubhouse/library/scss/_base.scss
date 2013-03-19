@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Unlimited Solutions Clubhouse
+Author: Chris Violette
 
 Stylesheet: Base Mobile Stylesheet
 
@@ -11,6 +11,8 @@ and will be used across all viewports.
 
 ******************************************************************/
 
+@import "compass/css3";
+
 /*********************
 GENERAL STYLES
 *********************/
@@ -19,7 +21,8 @@ body {
 	font-family: $serif;
 	font-size: 100%;
 	line-height: 1.5;
-	color: #565656;
+	color: #333231;
+    background: rgb(242, 243, 247) url(../images/body-background.png) 0 0 repeat;
 }
 
 /********************
@@ -105,9 +108,11 @@ H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-	font-family: $sans-serif;
+	font-family: $header;
 	text-rendering: optimizelegibility;
-	font-weight: 500;
+	font-weight: 400;
+    color: $ch-orange;
+    @include text-shadow(0 1px 0 #FFF);
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -116,6 +121,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	/* removing text decoration from all headline links */
 	a {
 		text-decoration: none;
+        color: $ch-orange;
+
+        &:hover {
+            color: $ch-blue;
+        }
 	}
 }
 
@@ -146,13 +156,91 @@ h5, .h5 {
 	letter-spacing: 2px;
 }
 
+h2, .h2,
+h4, .h4 {
+    color: $ch-blue;
+    /*a {
+        color: $ch-blue;
+        &:hover {
+            color: $ch-orange;
+        }
+    }*/
+}
+
 /*********************
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+    .social-icons {
+        text-align: center;
+        font-size: 32px;
+        line-height: 1em;
+        @include text-shadow(0 1px 0 #FFF);
+        a {
+            @include transition(all 0.1s ease-out);
+        }
+    }
+        
+    .icon-facebook-sign {
+        color: #3b5998;
+        &:hover {
+            color: $ch-orange;    
+        }
+    }
+        
+    .icon-twitter-sign {
+        color: #33CCFF;
+        &:hover {
+            color: $ch-orange;    
+        }
+    }
+            
+    #search {
+        margin: 20px 0;
+        
+        .widget {
+            
+        }
+            
+        .widget_search {
+            label, #searchsubmit {
+                display: none;    
+            }
+                
+            #s {
+                font-family: $sans-serif;
+                border: 1px solid #b3b3b3;
+                width: 100%;
+                padding: 8px 8px 8px 24px;
+                background: rgba(#FFF, 0.75) url(../images/search-icon.png) 3px 50% no-repeat;
+                @include transition(all 0.5s ease-out);
+                    
+                &:focus {
+                    outline: none;
+                    background-color: #FFF;
+                }
+            }
+        }
+    }
+}
 
-	#logo {}
+	#logo {
+        margin: 15px auto;
+    
+        a {
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-indent: 150%;
+            background: url(../images/clubhouse-logo-wide.png) 50% 0 no-repeat;
+            background-size: contain;
+            width: 100%;
+            margin: 0 auto;
+            max-width: 480px;
+            height: 127px;
+        }
+    }
 
 /*********************
 NAVIGATION STYLES
@@ -167,17 +255,20 @@ and more scalable.
 */
 
 .nav {
-	border: 1px solid #ccc;
-	border-bottom: 0;
+	background: $ch-blue;
 
 	li {
 
 		a {
 			display: block;
 			text-decoration: none;
+            font-family: $sans-serif;
+            font-weight: 200;
 			padding: 10px 10px;
-			background-color: #eee;
-			border-bottom: 1px solid #ccc;
+			background-color: none;
+            color: #FFF;
+            border-top: 1px solid rgba(#FFF, 0.1);
+            @include transition(all 0.1s ease-in);
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -186,11 +277,16 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 			&:hover, &:focus {
-
+                background: $ch-orange;
+                color: #FFF;
 			}
 		}
 
-		&:first-child {}
+		&:first-child {
+            a {
+                border-top: none;
+            }
+        }
 
 		&:last-child {}
 
@@ -231,7 +327,9 @@ and more scalable.
 	li.current_page_item,
 	li.current-page-ancestor {
 
-		a {}
+		a {
+            text-decoration: underline;
+        }
 
 	}  /* end current highlighters */
 
@@ -335,9 +433,24 @@ POSTS & CONTENT STYLES
 			and floating images at the next breakpoint,
 			but it's up to you. Feel free to change it up.
 			*/
-			.alignleft, img.alignleft {}
-			.alignright, img.alignright {}
+			.alignleft, img.alignleft {
+                @include transform(rotate(-2deg));
+            }
+			.alignright, img.alignright {
+                @include transform(rotate(2deg));
+            }
 			.aligncenter, img.aligncenter {}
+    
+            .alignleft, img.alignleft,
+            .alignright, img.alignright {
+                @include transition(all 0.1s ease-out);
+                @include box-shadow(0 5px 15px rgba(#000, 0.15));
+                
+                &:hover {
+                    @include transform(rotate(0));
+                    @include box-shadow(0 5px 15px rgba(#000, 0.25));
+                }
+            }
 
 			video, object {
 				max-width: 100%;
@@ -781,11 +894,59 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.sidebar {
 
-	.widgettitle {}
+	.widgettitle {
+        color: #FFF;
+        border: none;
+        @include text-shadow(none);
+    }
 
 	.widget {
+        margin: 0;
+        color: #FFF;
+        padding: 10px;
+    
+        &:nth-child(4n + 1) {
+            clear: both;
+            width: 100%;
+            height: 185px;
+            background: $ch-blue;
+            margin: 0 0 20px 0;
+        }
+    
+        &:nth-child(4n + 2) {
+            float: left;
+            margin: 0 0 20px 0;
+            min-height: 390px;
+            background: $ch-orange;
+            width: 48%;
+        }
+    
+        &:nth-child(4n + 3) {
+            float: right;
+            width: 48%;
+            margin: 0 0 20px 0;
+            min-height: 185px;
+            background: $ch-brown;
+            
+        }
+    
+        &:nth-child(4n + 4) {
+            float: right;
+            width: 48%;
+            margin: 0 0 20px 0;
+            min-height: 185px;
+            background: $ch-brown;
+        }
+    
+        a {
+            color: rgba(#FFF, 0.75);
+        
+            &:hover {
+                color: #FFF;
+            }
+        }
 
 		ul {
 
@@ -805,6 +966,8 @@ SIDEBARS & ASIDES
 		}
 
 	}
+        
+}
 
 /*********************
 FOOTER STYLES

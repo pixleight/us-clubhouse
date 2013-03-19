@@ -31,31 +31,90 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+    
+}
+    
+    .wrap {
+        position: relative;
+        z-index: 1;
+        min-height: 178px + 15px;
+    }
 
-	#logo {}
+	#logo {
+        margin: 0;
+        
+        a {
+            width: 140px;
+            height: 178px;
+            background: url(../images/clubhouse-logo.png);
+            position: absolute;
+            z-index: 2;
+            top: 15px;
+            left: 0;
+        }
+    }
 
 /*********************
 NAVIGATION STYLES
 *********************/
 
+.header {
+    .social-icons {
+        float: right;
+        margin-top: 32px;
+        font-size: 27px;
+    }
+    
+    nav {
+        overflow: auto;
+        background: $ch-blue;
+        margin-top: 85px;
+    }
+        
+    .nav {
+        float: right;    
+    }
+        
+    #search {
+        margin: 20px 0;
+        
+        .widget {
+            float: right;    
+        }
+            
+        .widget_search {
+            label, #searchsubmit {
+                display: none;    
+            }
+                
+            #s {
+                width: 1px;
+                padding: 4px 4px 4px 24px;
+                    
+                &:focus {
+                    width: 250px;
+                }
+            }
+        }
+    }
+}
+
 .nav {
-	background: #eee;
-	border: 0;
+    margin: 0;
 
 	li {
 		float: left;
 		position: relative;
 
 		a {
-			border-bottom: 0;
+			border: none;
 
 			/*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				background-color: #dedede;
 
 			}
 		}
@@ -140,14 +199,9 @@ SIDEBARS & ASIDES
 	margin-top: 2.2em;
 }
 
-	.widgettitle {
-		border-bottom: 2px solid #444;
-		margin-bottom: 0.75em;
-	}
+	.widgettitle {}
 
 	.widget {
-		padding: 0 10px;
-		margin: 2.2em 0;
 
 		ul {
 			li {

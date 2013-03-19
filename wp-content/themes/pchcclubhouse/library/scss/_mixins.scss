@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Unlimited Solutions Clubhouse
+Author: Chris Violette
 
 Stylesheet: Mixins & Constants Stylesheet
 
@@ -14,6 +14,8 @@ A WORD OF WARNING: It's very easy to overdo it here. Be careful and
 remember less is more.
 
 ******************************************************************/
+
+@import url(http://fonts.googleapis.com/css?family=IM+Fell+English|Raleway:200);
 
 /*********************
 CLEARFIXIN'
@@ -62,8 +64,12 @@ $white:             #fff;
 $bones-pink:        #f01d4f;
 $bones-blue:        #1990db;
 
-$link-color:        $bones-pink;
-$link-hover:        darken($link-color, 9%);
+$ch-blue:           #2f3485;
+$ch-brown:          #8d7167;
+$ch-orange:         #e37027;
+
+$link-color:        $ch-blue;
+$link-hover:        $ch-orange;
 
 /*
 Here's a great tutorial on how to
@@ -76,8 +82,9 @@ http://sachagreif.com/sass-color-variables/
 TYPOGRAPHY
 *********************/
 
-$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$sans-serif:        "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             "Palatino Regular", "Palatino Linotype Regular", "Book Antiqua", Georgia;
+$header:            "IM Fell English", $serif;
 
 
 /* 	To embed your own fonts, use this syntax
