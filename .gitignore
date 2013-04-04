@@ -33,6 +33,10 @@ wp-content/plugins/*
 wp-content/themes/*
 !wp-content/themes/pchcclubhouse/
 
+# Recognise these files in previously ignored locations
+!wp-content/uploads/.htaccess
+
+# Ignore data and junk files
 *.DS_Store
 .sass-cache/
 *Thumbs.DB
