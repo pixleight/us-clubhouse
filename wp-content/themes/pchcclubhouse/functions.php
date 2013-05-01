@@ -74,6 +74,16 @@ you like. Enjoy!
 
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
+	    register_sidebar(array(
+		'id' => 'feature-beforecontent',
+		'name' => __('Before Content Feature', 'bonestheme'),
+		'description' => __('Full-width featured area before the content, below the main header.', 'bonestheme'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	
     register_sidebar(array(
 		'id' => 'search',
 		'name' => __('Search', 'bonestheme'),

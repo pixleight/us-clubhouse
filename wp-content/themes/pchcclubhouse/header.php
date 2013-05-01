@@ -67,3 +67,5 @@
 				</div> <!-- end #inner-header -->
 
 			</header> <!-- end header -->
+			
+			<?php get_sidebar('featurebeforecontent'); ?>
