@@ -54,8 +54,7 @@
 					<?php // bloginfo('description'); ?>
                     
                     <div class="social-icons">
-                        <a href="http://www.facebook.com" target="_blank" class="icon-facebook-sign"></a>
-                        <a href="http://www.twitter.com" target="_blank" class="icon-twitter-sign"></a>
+                        <a href="http://www.facebook.com/pages/Unlimited-Solutions-Clubhouse/489088401149276" target="_blank" class="icon-facebook-sign"></a>
                     </div>
 
 					<nav role="navigation">
