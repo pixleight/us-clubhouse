@@ -48,6 +48,9 @@ function bones_ahoy() {
     add_filter('the_content', 'bones_filter_ptags_on_images');
     // cleaning up excerpt
     add_filter('excerpt_more', 'bones_excerpt_more');
+    
+    // Add shotcode functionality to text widgets
+    add_filter('widget_text', 'do_shortcode');
 
 } /* end bones ahoy */
 
