@@ -3159,66 +3159,66 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+/* line 897, ../scss/_base.scss */
+.sidebar {
+  /* Facebook Feed Widget */
+}
 /* line 899, ../scss/_base.scss */
 .sidebar .widgettitle {
   color: #FFF;
   border: none;
+  margin: 0 0 0.25em;
+  line-height: 1.3em;
+  font-size: 1.4em;
   text-shadow: none;
 }
-/* line 905, ../scss/_base.scss */
+/* line 908, ../scss/_base.scss */
 .sidebar .widget {
   margin: 0;
   color: #FFF;
   padding: 10px;
+  font-size: 0.9em;
   /* text widgets */
 }
-/* line 910, ../scss/_base.scss */
-.sidebar .widget:nth-child(4n + 1) {
+/* line 914, ../scss/_base.scss */
+.sidebar .widget:nth-child(3n + 1) {
   clear: both;
   width: 100%;
-  height: 185px;
+  min-height: 185px;
   background: #2f3485;
   margin: 0 0 20px 0;
 }
-/* line 918, ../scss/_base.scss */
-.sidebar .widget:nth-child(4n + 2) {
+/* line 922, ../scss/_base.scss */
+.sidebar .widget:nth-child(3n + 2) {
   float: left;
   margin: 0 0 20px 0;
-  min-height: 390px;
+  min-height: 220px;
   background: #e37027;
   width: 48%;
 }
-/* line 926, ../scss/_base.scss */
-.sidebar .widget:nth-child(4n + 3) {
+/* line 930, ../scss/_base.scss */
+.sidebar .widget:nth-child(3n + 3) {
   float: right;
   width: 48%;
   margin: 0 0 20px 0;
-  min-height: 185px;
+  min-height: 220px;
   background: #8d7167;
 }
-/* line 935, ../scss/_base.scss */
-.sidebar .widget:nth-child(4n + 4) {
-  float: right;
-  width: 48%;
-  margin: 0 0 20px 0;
-  min-height: 185px;
-  background: #8d7167;
-}
-/* line 943, ../scss/_base.scss */
+/* line 947, ../scss/_base.scss */
 .sidebar .widget a {
   color: rgba(255, 255, 255, 0.75);
 }
-/* line 946, ../scss/_base.scss */
+/* line 950, ../scss/_base.scss */
 .sidebar .widget a:hover {
   color: #FFF;
 }
-/* line 955, ../scss/_base.scss */
+/* line 959, ../scss/_base.scss */
 .sidebar .widget.widget_text.widget-first .widgettitle {
   margin: 0;
   font-size: 32px;
   text-align: right;
 }
-/* line 961, ../scss/_base.scss */
+/* line 965, ../scss/_base.scss */
 .sidebar .widget.widget_text.widget-first p {
   font-size: 22px;
   font-family: 'Raleway', sans-serif;
@@ -3226,15 +3226,25 @@ SIDEBARS & ASIDES
   font-weight: 200;
   line-height: 1.3em;
 }
-/* line 974, ../scss/_base.scss */
+/* line 978, ../scss/_base.scss */
 .sidebar .widget ul li {
   /* deep nesting */
+}
+/* line 996, ../scss/_base.scss */
+.sidebar ul.fbf_facebook_page_widget {
+  margin: 0;
+}
+/* line 1001, ../scss/_base.scss */
+.sidebar .advanced-recent-posts .date {
+  display: block;
+  font-size: 0.8em;
+  font-style: italic;
 }
 
 /*********************
 FOOTER STYLES
 *********************/
-/* line 997, ../scss/_base.scss */
+/* line 1014, ../scss/_base.scss */
 .footer {
   clear: both;
 }
@@ -3252,17 +3262,17 @@ view.
 /*********************
 ABOVE CONTENT STYLES
 *********************/
-/* line 1028, ../scss/_base.scss */
+/* line 1045, ../scss/_base.scss */
 .feature-beforecontent {
   min-height: 0;
   margin-top: 1.1em;
 }
-/* line 1032, ../scss/_base.scss */
+/* line 1049, ../scss/_base.scss */
 .feature-beforecontent .flexslider {
   border: none;
   background: none;
 }
-/* line 1037, ../scss/_base.scss */
+/* line 1054, ../scss/_base.scss */
 .feature-beforecontent .flexslider .slides > li {
   margin-bottom: 0;
 }
