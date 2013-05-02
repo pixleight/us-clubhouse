@@ -71,7 +71,7 @@ you like. Enjoy!
 */
 
 /************* FLEX SLIDER WIDGET ********************/
-require_once( 'library/envato-flex-slider.php' );
+require_once( 'library/envato-flex-slider.php' ); 
 
 /************* ACTIVE SIDEBARS ********************/
 
