@@ -70,6 +70,9 @@ You can change the names and dimensions to whatever
 you like. Enjoy!
 */
 
+/************* FLEX SLIDER WIDGET ********************/
+require_once( 'library/envato-flex-slider.php' );
+
 /************* ACTIVE SIDEBARS ********************/
 
 // Sidebars & Widgetizes Areas
