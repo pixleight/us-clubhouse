@@ -655,6 +655,12 @@ mobile. Make sure to double check these!
 }
 
 /* end .footer-links */
+/* line 338, ../scss/_768up.scss */
+.gallery-item {
+  padding: 15px;
+  float: left;
+}
+
 /******************************************************************
 Site Name: 
 Author: 
