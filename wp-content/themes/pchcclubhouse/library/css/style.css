@@ -3177,7 +3177,7 @@ SIDEBARS & ASIDES
   /* text widgets */
 }
 /* line 915, ../scss/_base.scss */
-.sidebar .widget:nth-child(3n + 1) {
+.sidebar .widget:nth-child(3n + 1), .sidebar .widget.widget-1 {
   clear: both;
   width: 100%;
   min-height: 155px;
@@ -3185,7 +3185,7 @@ SIDEBARS & ASIDES
   margin: 0 0 20px 0;
 }
 /* line 923, ../scss/_base.scss */
-.sidebar .widget:nth-child(3n + 2) {
+.sidebar .widget:nth-child(3n + 2), .sidebar .widget.widget-2 {
   float: left;
   margin: 0 0 20px 0;
   min-height: 220px;
@@ -3193,7 +3193,7 @@ SIDEBARS & ASIDES
   width: 48%;
 }
 /* line 931, ../scss/_base.scss */
-.sidebar .widget:nth-child(3n + 3) {
+.sidebar .widget:nth-child(3n + 3), .sidebar .widget.widget-3 {
   float: right;
   width: 48%;
   margin: 0 0 20px 0;

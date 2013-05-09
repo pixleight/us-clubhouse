@@ -30,6 +30,16 @@ import the mixins file so SASS can understand the variables.
 you can call the larger styles if you want, but there's really no need 
 */
 
+.header {
+	#search {
+		.widget_search {
+			#s {
+				background: #FFFFFF url(../images/search-icon.png) 3px 50% no-repeat;
+			}
+		}
+	}
+}
+
 
 /******************************************************************
 ADDITIONAL IE FIXES
@@ -52,3 +62,9 @@ header.php file to see what they are:
 .lt-ie8 .class { ... }
 
 */
+
+.lt-ie8 {
+	.gallery-item {
+		width: 33%;
+	}
+}

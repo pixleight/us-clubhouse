@@ -912,7 +912,7 @@ SIDEBARS & ASIDES
         padding: 10px;
         font-size: 0.9em;
     
-        &:nth-child(3n + 1) {
+        &:nth-child(3n + 1), &.widget-1 {
         	clear: both;
             width: 100%;
             min-height: 155px;
@@ -920,7 +920,7 @@ SIDEBARS & ASIDES
             margin: 0 0 20px 0;
         }
     
-        &:nth-child(3n + 2) {
+        &:nth-child(3n + 2), &.widget-2 {
             float: left;
             margin: 0 0 20px 0;
             min-height: 220px;
@@ -928,7 +928,7 @@ SIDEBARS & ASIDES
             width: 48%;
         }
     
-        &:nth-child(3n + 3) {
+        &:nth-child(3n + 3), &.widget-3 {
             float: right;
             width: 48%;
             margin: 0 0 20px 0;

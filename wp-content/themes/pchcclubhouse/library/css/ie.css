@@ -674,6 +674,11 @@ be seen on the Desktop.
 /* 
 you can call the larger styles if you want, but there's really no need 
 */
+/* line 36, ../scss/ie.scss */
+.header #search .widget_search #s {
+  background: white url(../images/search-icon.png) 3px 50% no-repeat;
+}
+
 /******************************************************************
 ADDITIONAL IE FIXES
 These fixes are now ONLY seen by IE, so you don't have to worry
@@ -694,3 +699,7 @@ header.php file to see what they are:
 .lt-ie8 .class { ... }
 
 */
+/* line 67, ../scss/ie.scss */
+.lt-ie8 .gallery-item {
+  width: 33%;
+}
