@@ -25,6 +25,31 @@ body {
     background: rgb(242, 243, 247) url(../images/body-background.png) 0 0 repeat;
 }
 
+#ie-warning {
+	background: $ch-orange;
+	margin: 0;
+	padding: 0.5em 0;
+	color: #FFF;
+	font-size: 13px;
+	text-align: center;
+	
+	p {
+		width: 80%;
+		text-align: center;
+		margin: 0 auto;
+	}
+	
+	strong {
+		font-family: $header;
+		font-size: 1.3em;
+	}
+	
+	a {
+		color: #FFF;
+		font-weight: bold;
+	}
+}
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
