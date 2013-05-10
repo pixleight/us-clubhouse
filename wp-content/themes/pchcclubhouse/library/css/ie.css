@@ -703,24 +703,25 @@ header.php file to see what they are:
 .lt-ie8 .gallery-item {
   width: 33%;
 }
-/* line 71, ../scss/ie.scss */
-.lt-ie8 .sidebar .widget.widget-1 {
+
+/* line 74, ../scss/ie.scss */
+.lt-ie9 .sidebar .widget.widget-1 {
   clear: both;
   width: 100%;
   min-height: 155px;
   background: #2f3485;
   margin: 0 0 20px 0;
 }
-/* line 79, ../scss/ie.scss */
-.lt-ie8 .sidebar .widget.widget-2 {
+/* line 82, ../scss/ie.scss */
+.lt-ie9 .sidebar .widget.widget-2 {
   float: left;
   margin: 0 0 20px 0;
   min-height: 220px;
   background: #e37027;
   width: 48%;
 }
-/* line 87, ../scss/ie.scss */
-.lt-ie8 .sidebar .widget.widget-3 {
+/* line 90, ../scss/ie.scss */
+.lt-ie9 .sidebar .widget.widget-3 {
   float: right;
   width: 48%;
   margin: 0 0 20px 0;
