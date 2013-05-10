@@ -24,6 +24,7 @@ import the mixins file so SASS can understand the variables.
 @import "grid";
 @import "481up";
 @import "768up";
+@import "915up";
 @import "1030up";
 
 /* 
@@ -71,7 +72,8 @@ header.php file to see what they are:
 
 .lt-ie9 {
 	
-	.sidebar .widget.widget-1 {
+	.sidebar .widget.widget-1,
+	.sidebar .widget.widget-4 {
 	  clear: both;
 	  width: 100%;
 	  min-height: 155px;
@@ -79,7 +81,8 @@ header.php file to see what they are:
 	  margin: 0 0 20px 0;
 	}
 	
-	.sidebar .widget.widget-2 {
+	.sidebar .widget.widget-2,
+	.sidebar .widget.widget-5 {
 	  float: left;
 	  margin: 0 0 20px 0;
 	  min-height: 220px;
@@ -87,7 +90,8 @@ header.php file to see what they are:
 	  width: 48%;
 	}
 	
-	.sidebar .widget.widget-3 {
+	.sidebar .widget.widget-3,
+	.sidebar .widget.widget-6 {
 	  float: right;
 	  width: 48%;
 	  margin: 0 0 20px 0;

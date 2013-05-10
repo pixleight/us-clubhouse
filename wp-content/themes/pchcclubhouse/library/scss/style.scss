@@ -64,6 +64,19 @@ you can add resource intensive styles.
 } // end of media query
 
 /*
+Media query to not let the menu get behind the logo.
+*/
+@media only screen and (min-width: 915px) {
+
+	// import grids
+	@import "grid";
+
+	// styles in 768up.scss
+	@import "915up";
+
+} // end of media query
+
+/*
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
