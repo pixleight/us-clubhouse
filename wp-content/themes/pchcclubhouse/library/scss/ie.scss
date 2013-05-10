@@ -67,4 +67,29 @@ header.php file to see what they are:
 	.gallery-item {
 		width: 33%;
 	}
+	
+	.sidebar .widget.widget-1 {
+	  clear: both;
+	  width: 100%;
+	  min-height: 155px;
+	  background: #2f3485;
+	  margin: 0 0 20px 0;
+	}
+	
+	.sidebar .widget.widget-2 {
+	  float: left;
+	  margin: 0 0 20px 0;
+	  min-height: 220px;
+	  background: #e37027;
+	  width: 48%;
+	}
+	
+	.sidebar .widget.widget-3 {
+	  float: right;
+	  width: 48%;
+	  margin: 0 0 20px 0;
+	  min-height: 220px;
+	  background: #8d7167;
+	}
+	
 }
