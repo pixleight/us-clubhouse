@@ -75,6 +75,7 @@
 
 					<nav role="navigation">
 						<?php bones_main_nav(); ?>
+						<div class="clearfix"></div>
 					</nav>
                     
                     <?php get_sidebar('search'); ?>
