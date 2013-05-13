@@ -96,7 +96,16 @@ add_action('wp_dashboard_setup', 'bones_custom_dashboard_widgets');
 //Updated to proper 'enqueue' method
 //http://codex.wordpress.org/Plugin_API/Action_Reference/login_enqueue_scripts
 function bones_login_css() {
+	global $wp_styles;
+	
+	// ie-only style sheet
+    wp_register_style( 'ch-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '' );
+
 	wp_enqueue_style( 'bones_login_css', get_template_directory_uri() . '/library/css/login.css', false );
+
+    $wp_styles->add_data( 'ch-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+    
+    wp_enqueue_style('ch-ie-only');
 }
 
 // changing the logo link from wordpress.org to your site
