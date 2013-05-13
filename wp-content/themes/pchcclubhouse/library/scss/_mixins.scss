@@ -206,6 +206,13 @@ probably best not to use it. I mean, were you going to anyway? */
 }
 
 
+@mixin box-shadow($shadowx: 0, $shadowy: 0, $shadowsize: 0, $shadowspread: 0, $shadowcolor: #000) {
+	-webkit-box-shadow:	$shadowx $shadowy $shadowsize $shadowspread $shadowcolor;
+	-moz-box-shadow:	$shadowx $shadowy $shadowsize $shadowspread $shadowcolor;
+	-ms-box-shadow:		$shadowx $shadowy $shadowsize $shadowspread $shadowcolor;
+	box-shadow:			$shadowx $shadowy $shadowsize $shadowspread $shadowcolor;
+}
+
 /*********************
 BUTTONS
 *********************/

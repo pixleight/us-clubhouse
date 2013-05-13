@@ -55,7 +55,6 @@ NAVIGATION STYLES
     }
     
     nav {
-        overflow: auto;
         background: $ch-blue;
         margin-top: 85px;
     }
@@ -115,12 +114,16 @@ NAVIGATION STYLES
 		*/
 		ul.sub-menu,
 		ul.children {
-			margin-top: 0;
-			border: 1px solid #ccc;
+			margin: 0;
+			padding: 0;
+			border: none;
 			border-top: 0;
 			position: absolute;
 			display: none;
 			z-index: 8999;
+			right: 0;
+			background: $ch-orange;
+			@include box-shadow(0 5px 10px rgba(#000, 0.15));
 
 			li {
 
@@ -129,10 +132,13 @@ NAVIGATION STYLES
 					border-right: 0;
 					display: block;
 					width: 180px;
-					border-bottom: 1px solid #ccc;
+					border-bottom: 1px solid rgba(#FFF, 0.25);
 
 					&:hover,
-					&:focus {}
+					&:focus {
+						background: #FFF;
+						color: $ch-orange;
+					}
 
 					&:link {}
 				}
