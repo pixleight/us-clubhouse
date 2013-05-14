@@ -939,6 +939,8 @@ SIDEBARS & ASIDES
         color: #FFF;
         padding: 10px;
         font-size: 0.9em;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     
         &:nth-child(3n + 1), &.widget-1 {
         	clear: both;
